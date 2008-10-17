@@ -1,0 +1,17 @@
+--- global.mk.orig	2007-08-07 14:10:10 +0400
++++ global.mk	2007-08-07 14:13:05 +0400
+@@ -6,11 +6,11 @@
+ DEBUG = 0
+ 
+ # installation path
+-PREFIX = /usr/local
++PREFIX = /usr
+ # etc dir
+-ETCDIR = $(PREFIX)/etc/$(PROGLNAME)
++ETCDIR = /etc/$(PROGLNAME)
+ # where put reports (you can change it later via free-sa.conf configuration file)
+-WWWDIR = $(PREFIX)/var/www/htdocs/$(PROGLNAME)
++WWWDIR = /usr/share/$(PROGLNAME)
+ # dir for temporary data storing (you can change it later via free-sa.conf configuration file)
+ TMPDIR = /var/cache/$(PROGLNAME)
+ # where localisation files to put (it is safe to leave default value unchanged)
