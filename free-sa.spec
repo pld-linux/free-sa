@@ -39,6 +39,9 @@ mv $RPM_BUILD_ROOT/usr/man/* $RPM_BUILD_ROOT/%{_mandir}/
 rm -rf $RPM_BUILD_ROOT%{_prefix}/{man,share/doc} 
 install etc/free-sa.conf.sample.in $RPM_BUILD_ROOT/%_sysconfdir/%{name}/%{name}.conf
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog FAQ INSTALL README THANKS
@@ -46,3 +49,5 @@ install etc/free-sa.conf.sample.in $RPM_BUILD_ROOT/%_sysconfdir/%{name}/%{name}.
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}/*
 %{_mandir}/man[15]/*
+%dir %{_datadir}/%{name}
+%dir %_sysconfdir/%{name}
