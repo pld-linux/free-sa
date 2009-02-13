@@ -1,12 +1,12 @@
 Summary:	Squid report generator per user/ip/name
 Name:		free-sa
-Version:	1.5.0
+Version:	1.5.1
 Release:	0.1
 License:	GPL v3
 Group:		Networking
 URL:		http://free-sa.sourceforge.net/
 Source0:	http://dl.sourceforge.net/free-sa/%{name}-%{version}.tar.gz
-# Source0-md5:	247d942cbe5cbb86c7d2fc1616646c4c
+# Source0-md5:	b92c990932f9feae8f4f73e8ffef69fa
 Patch0:		%{name}-global.mk.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
