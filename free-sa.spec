@@ -1,3 +1,4 @@
+# TODO: optflags
 Summary:	Squid report generator per user/IP/name
 Summary(pl.UTF-8):	Generator raportów ze squida
 Name:		free-sa
@@ -35,13 +36,13 @@ wygenerowanego kodu HTML/CSS z wytycznymi W3C.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-PREFIX=$RPM_BUILD_ROOT%{_prefix}
+	PREFIX=$RPM_BUILD_ROOT%{_prefix}
 
 %{__make} -C themes install \
 	WWWDIR=$RPM_BUILD_ROOT%{_datadir}/%{name}
 
 install -d $RPM_BUILD_ROOT%{_mandir}
-install -d $RPM_BUILD_ROOT%_sysconfdir/%{name}
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/%{name}
 
 mv $RPM_BUILD_ROOT%{_prefix}/man/* $RPM_BUILD_ROOT%{_mandir}
 rm -rf $RPM_BUILD_ROOT%{_prefix}/{man,share/doc}
@@ -53,9 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog FAQ INSTALL README THANKS
+%dir %{_sysconfdir}/%{name}
 %config(noreplace) %{_sysconfdir}/%{name}/*
 %attr(755,root,root) %{_bindir}/%{name}
+%dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*
 %{_mandir}/man[15]/*
-%dir %{_datadir}/%{name}
-%dir %{_sysconfdir}/%{name}
