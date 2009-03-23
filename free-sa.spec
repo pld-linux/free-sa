@@ -2,12 +2,12 @@
 Summary:	Squid report generator per user/IP/name
 Summary(pl.UTF-8):	Generator raportów ze squida
 Name:		free-sa
-Version:	1.5.1
+Version:	1.6.0
 Release:	0.1
 License:	GPL v3
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/free-sa/%{name}-%{version}.tar.gz
-# Source0-md5:	b92c990932f9feae8f4f73e8ffef69fa
+# Source0-md5:	e013ef81f53a034528cda62772ab0a21
 Patch0:		%{name}-global.mk.patch
 URL:		http://free-sa.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,7 +26,7 @@ wygenerowanego kodu HTML/CSS z wytycznymi W3C.
 
 %prep
 %setup -q
-%patch0 -p0
+#%patch0 -p0
 
 %build
 %{__make} \
