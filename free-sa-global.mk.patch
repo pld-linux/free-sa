@@ -1,17 +1,23 @@
---- global.mk.orig	2007-08-07 14:10:10 +0400
-+++ global.mk	2007-08-07 14:13:05 +0400
-@@ -6,11 +6,11 @@
- DEBUG = 0
- 
- # installation path
+--- free-sa-1.6.2/configs/generic-any-cc.mk.org	2009-04-16 20:32:29.343640310 +0000
++++ free-sa-1.6.2/configs/generic-any-cc.mk	2009-04-16 20:34:08.673836739 +0000
+@@ -1,14 +1,14 @@
 -PREFIX = /usr/local
 +PREFIX = /usr
- # etc dir
 -ETCDIR = $(PREFIX)/etc/$(PROGLNAME)
 +ETCDIR = /etc/$(PROGLNAME)
- # where put reports (you can change it later via free-sa.conf configuration file)
 -WWWDIR = $(PREFIX)/var/www/htdocs/$(PROGLNAME)
+-TMPDIR = $(PREFIX)/var/cache/$(PROGLNAME)
 +WWWDIR = /usr/share/$(PROGLNAME)
- # dir for temporary data storing (you can change it later via free-sa.conf configuration file)
- TMPDIR = /var/cache/$(PROGLNAME)
- # where localisation files to put (it is safe to leave default value unchanged)
++TMPDIR = /var/cache/$(PROGLNAME)
+ LOCDIR = $(PREFIX)/share/$(PROGLNAME)
+ DOCDIR = $(PREFIX)/share/doc/$(PROGLNAME)-$(PROGVERSION)
+ LOGFILE = /var/log/squid/access.log
+ 
+ CC = cc
+-SORT = /usr/bin/sort
++SORT = /bin/sort
+ INSTALL = $(GMKPATH)/SAinstall.sh
+ 
+-LARGEFILE = no
++LARGEFILE = yes
+ SATSEP = 
